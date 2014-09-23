@@ -18,6 +18,13 @@ public class Student {
         this.group = group;
     }
 
+    public Student(String firstName, String lastName, int age, String group) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.group = group;
+    }
+
     public Student() {
     }
 

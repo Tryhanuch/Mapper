@@ -1,28 +1,37 @@
 package entity;
 
+import anot.Column;
+import anot.Entity;
+
 /**
  * Created by tish on 01.09.2014.
  */
+@Entity(name = "Student")
 public class Student {
+    @Column(name = "student_id")
     private int id;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "age")
     private int age;
-    private String group;
+    @Column(name = "academic_group")
+    private String academicGroup;
 
-    public Student(int id, String firstName, String lastName, int age, String group) {
+    public Student(int id, String firstName, String lastName, int age, String academicGroup) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.group = group;
+        this.academicGroup = academicGroup;
     }
 
-    public Student(String firstName, String lastName, int age, String group) {
+    public Student(String firstName, String lastName, int age, String academicGroup) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.group = group;
+        this.academicGroup = academicGroup;
     }
 
     public Student() {
@@ -62,11 +71,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getGroup() {
-        return group;
+    public String getAcademicGroup() {
+        return academicGroup;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setAcademicGroup(String academicGroup) {
+        this.academicGroup = academicGroup;
     }
 }
